@@ -20,7 +20,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
         return new TimeEntry();
     }
 
-    public TimeEntry find(long id) {
+    public TimeEntry find(Long id) {
         return timeEntryList.get(id);
     }
 
@@ -38,7 +38,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
         return newTimeEntry;
     }
 
-    public TimeEntry update(long id, TimeEntry timeEntry) {
+    public TimeEntry update(Long id, TimeEntry timeEntry) {
 //        return new TimeEntry();
         timeEntry.setId(id);
         timeEntryList.replace(id,  timeEntry );
@@ -46,7 +46,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository {
         return timeEntry;
     }
 
-    public void delete(long id) {
+    public void delete(Long id) {
         timeEntryList.remove(id);
     }
 

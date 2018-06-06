@@ -4,5 +4,6 @@ applications:
   path: build/libs/pal-tracker.jar
   routes:
   - route: pal-tracker-accountable-lizard.apps.pikes.pal.pivotal.io
-  random-route: true
-  
+  random-route: false
+  services:
+  - tracker-database
